@@ -1,28 +1,31 @@
+/* Reset para evitar contenido en ::before */
+.boostmycroco-button::before {
+    content: none !important;
+}
+
+/* Icon Picker */
 .icon-picker {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 íconos por fila */
+    grid-template-columns: repeat(3, 1fr);
     gap: 10px;
-    max-height: 300px; /* Limitar altura */
-    overflow-y: auto; /* Hacer scroll si excede el límite */
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
-    margin-top: 10px;
+    max-height: 300px;
+    overflow-y: auto;
 }
 
 .icon-button {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    padding: 10px;
-    cursor: pointer;
-    background-color: white;
-    font-size: 14px;
     width: 60px;
     height: 60px;
-    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
 }
 
 .icon-button.active {
@@ -32,4 +35,9 @@
 
 .icon-button i {
     font-size: 18px;
+}
+
+/* Contenedor del botón */
+.boostmycroco-button-container {
+    /* El text-align se aplica inline desde render_callback */
 }
